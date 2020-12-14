@@ -677,6 +677,10 @@
       <Project>{6B0BDCAF-0D37-50EC-F47C-6D8148038D38}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.DeviceSimulator.Tests.Common.csproj">
+      <Project>{618E1B87-B619-49F5-9EC0-D6C6F1E08841}</Project>
+      <Name>Unity.DeviceSimulator.Tests.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
       <Project>{72EFBAF3-A2CE-3092-E101-D892995954DF}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
@@ -697,6 +701,10 @@
       <Project>{456B724E-8819-EAD9-0C7D-850FDD16C283}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.DeviceSimulator.Editor.csproj">
+      <Project>{021D4FFB-8AEB-94A6-9E5A-1414D87D091F}</Project>
+      <Name>Unity.DeviceSimulator.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{9E849DAC-4DD4-88F0-23EB-2371934478D2}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
@@ -716,14 +724,6 @@
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{B63EECA6-08B8-ABB0-E5CE-3DC8F7B36874}</Project>
       <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.DeviceSimulator.Tests.Common.csproj">
-      <Project>{618E1B87-B619-49F5-9EC0-D6C6F1E08841}</Project>
-      <Name>Unity.DeviceSimulator.Tests.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.DeviceSimulator.Editor.csproj">
-      <Project>{021D4FFB-8AEB-94A6-9E5A-1414D87D091F}</Project>
-      <Name>Unity.DeviceSimulator.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
