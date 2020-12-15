@@ -18,7 +18,7 @@ namespace FPS.Movement {
         [SerializeField] private float gravity = -9.8f;
         [SerializeField] private float groundDistance = 0.4f;
         [SerializeField] private Transform groundCheck = null;
-        [SerializeField] private LayerMask groundLayer;
+        [SerializeField] private LayerMask groundLayer = new LayerMask();
         [SerializeField] private float jumpingHeight = 3f;
 
         private Vector3 velocity;
