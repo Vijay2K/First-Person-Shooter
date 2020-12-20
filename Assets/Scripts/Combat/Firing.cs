@@ -7,7 +7,9 @@ namespace FPS.Combat {
         [SerializeField] private GameObject bulletPrefab = null;
         [SerializeField] private Transform bulletSpawnPoint = null;
         [SerializeField] private float bulletSpeed = 90f;
+        [SerializeField] private float fireRate = 1f;
 
+        private float lastFireTime;
         private bool isFiring;
 
 
@@ -27,11 +29,13 @@ namespace FPS.Combat {
             isFiring = false;
         }
 
-        private void Shoot() {            
-            GameObject bulletInstance = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
-            bulletInstance.GetComponent<Rigidbody>().AddForce(bulletSpawnPoint.forward * bulletSpeed * Time.deltaTime, ForceMode.Impulse) ;
+        private void Shoot() {   
+            if(Time.time > (1 / fireRate) + lastFireTime) {
+                GameObject bulletInstance = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
+                bulletInstance.GetComponent<Rigidbody>().AddForce(bulletSpawnPoint.forward * bulletSpeed, ForceMode.Impulse);
 
-            Destroy(bulletInstance, 5f);
+                lastFireTime = Time.time;
+            }
         }
 
 
